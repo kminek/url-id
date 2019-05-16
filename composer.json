@@ -1,0 +1,40 @@
+{
+    "name": "kminek/url-id",
+    "description": "Extract resource IDs (e.g. YouTube video ID) from URLs like a pro!",
+    "type": "library",
+    "homepage": "https://github.com/kminek/url-id",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grzesiek W",
+            "email": "kontakt@kminek.pl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "layershifter/tld-extract": "2.*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "4.*",
+        "friendsofphp/php-cs-fixer": "2.15.*",
+        "phpunit/phpunit": "7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kminek\\UrlId\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kminek\\UrlId\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix",
+        "test": [
+            "phpunit",
+            "@cs"
+        ]
+    }
+}
